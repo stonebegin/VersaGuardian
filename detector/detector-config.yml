@@ -1,0 +1,26 @@
+anomaly_scoring: 
+  anomaly_score_example:
+    percentage: 90
+    topn: 2
+global:
+  random_state: 42  
+data:
+  path: '../data/data/'
+  label_path: '../data/label/' 
+  save_path: '../results/'
+  row_begin: 0
+  row_end: 30000
+  col_begin: 0
+  col_end: 100
+  rec_windows_per_cycle: 1
+  header: null 
+  reconstruct:
+    window: 7200
+    stride: 14
+  detect:
+    window: 14
+    stride: 2
+detector_arguments:  
+  workers: 6
+  anomaly_scoring: 'anomaly_score_example' 
+  without_grouping: null
